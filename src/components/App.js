@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
-import logo from '../logo.png';
-
+import { AppHeader } from './header';
+import { AppDrawer } from './drawer';
 export default class App extends Component {
-
-    constructor() {
-        super();
+    constructor (props) {
+        super(props);
+        this.state = {
+            isDrawerOpen: false
+        };
     }
-
     render() {
         return (
-            <div className='container'>                
-                <img className='logo' src={logo} />
-                <h1 className='title'>React Starter</h1>
+            <div>
+                <AppHeader onLeftIconClick = { () => this.setState({isDrawerOpen: true})}/>
+                <AppDrawer open={this.state.isDrawerOpen} onToggle={(isDrawerOpen) => this.setState({isDrawerOpen})}
+                />
             </div>
         );
     }
