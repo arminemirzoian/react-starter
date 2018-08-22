@@ -1,5 +1,5 @@
 body {
-    background-color: $charcoal;
+    //background-color: $charcoal;
     font-family: $font-family;
 }
 
@@ -10,7 +10,10 @@ body {
     height: 100vh;        
     justify-content: center;
 }
-
+.container1 {
+    width: 1000px;
+    margin: 5px;
+}
 .logo {
     padding-top: 20px;
 }
